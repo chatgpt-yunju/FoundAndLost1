@@ -57,7 +57,7 @@ class  FoundAdapter extends BaseAdapter {
         FoundGood foundobj =list.get(position);
         foundViewHolder.tv_found_title.setText(foundobj.getTitle());
         foundViewHolder.tv_found_desc.setText(foundobj.getDesc());
-        foundViewHolder.tv_found_time.setText((CharSequence) foundobj.getTime());
+        foundViewHolder.tv_found_time.setText(foundobj.getCreatedAt());
         foundViewHolder.tv_found_num.setText(foundobj.getPhoneNum());
         return convertView;
     }
