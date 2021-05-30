@@ -36,7 +36,7 @@
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/et_title"
+        android:id="@+id/et_found_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -45,7 +45,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/et_phone_num"
+        android:id="@+id/et_found_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -54,7 +54,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/et_desc"
+        android:id="@+id/et_found_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
