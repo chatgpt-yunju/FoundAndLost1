@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +32,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 public class FoundDelegate extends BottomItemDelegate {
 
     private ListView lv_found=null ;
-//    private List<FoundGood> list_FoundGood =new ArrayList<>();
+    private ImageView iv_add_found;
 
 
     @Override
@@ -47,12 +48,18 @@ public class FoundDelegate extends BottomItemDelegate {
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
         lv_found=$(R.id.lv_found);
+        iv_add_found=$(R.id.iv_add_found);
         //初始化数据
         initData();
         //设置适配器
 //        FoundAdapter foundAdapter=new FoundAdapter();
 //        lv_found.setAdapter(foundAdapter);
-
+        iv_add_found.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportDelegate().start(new AddFoundDelegate());
+            }
+        });
     }
 
     @Override
