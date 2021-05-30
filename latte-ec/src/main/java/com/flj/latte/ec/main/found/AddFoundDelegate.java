@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.diabin.latte.ec.R;
 import com.flj.latte.delegates.bottom.BottomItemDelegate;
+import com.flj.latte.ec.main.EcBottomDelegate;
+import com.joanzapata.iconify.widget.IconTextView;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -25,7 +27,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 public class AddFoundDelegate extends BottomItemDelegate {
 
-    private ImageView iv_found_back,iv_found_add;
+    private IconTextView iv_found_back,iv_found_add;
     private EditText et_found_title,et_found_num,et_found_desc;
 
     @Override
@@ -49,7 +51,7 @@ public class AddFoundDelegate extends BottomItemDelegate {
         iv_found_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    getSupportDelegate().start(new FoundDelegate());
+                getSupportDelegate().startWithPop(new EcBottomDelegate());
             }
         });
 
@@ -109,12 +111,12 @@ public class AddFoundDelegate extends BottomItemDelegate {
                 if (e == null) {
                     Toast.makeText(getContext(), "捡到物品信息发布成功", Toast.LENGTH_LONG).show();
                     //成功后提示主界面刷新数据
-                    getSupportDelegate().start(new FoundDelegate());
+                    getSupportDelegate().startWithPop(new EcBottomDelegate());
                 } else {
                     Toast.makeText(getContext(), "捡到物品信息发布失败", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
-    
+
 }

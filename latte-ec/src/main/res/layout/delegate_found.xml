@@ -15,18 +15,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Lost"
+            android:text="Found"
             android:textColor="#fff"
             android:textSize="20sp" />
 
-        <ImageView
+        <com.joanzapata.iconify.widget.IconTextView
             android:id="@+id/iv_add_found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="12dp"
-            android:src="@drawable/add_lost" />
+            android:text="{fa-plus-circle}"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            />
+
     </RelativeLayout>
 
     <LinearLayout

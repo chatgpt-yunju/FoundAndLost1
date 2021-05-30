@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.diabin.latte.ec.R;
 import com.flj.latte.delegates.bottom.BottomItemDelegate;
 import com.flj.latte.delegates.web.WebDelegateImpl;
+import com.flj.latte.ec.main.EcBottomDelegate;
+import com.joanzapata.iconify.widget.IconTextView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,7 +34,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 public class FoundDelegate extends BottomItemDelegate {
 
     private ListView lv_found=null ;
-    private ImageView iv_add_found;
+    private IconTextView iv_add_found;
 
 
     @Override
@@ -57,7 +59,7 @@ public class FoundDelegate extends BottomItemDelegate {
         iv_add_found.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportDelegate().start(new AddFoundDelegate());
+                getParentDelegate().start(new AddFoundDelegate());
             }
         });
     }
