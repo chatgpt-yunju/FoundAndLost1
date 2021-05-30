@@ -11,7 +11,7 @@
         android:background="#EA4D3C">
 
         <ImageView
-            android:id="@+id/iv_back"
+            android:id="@+id/iv_found_back"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_centerVertical="true"
@@ -26,7 +26,7 @@
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/iv_add"
+            android:id="@+id/iv_found_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
