@@ -42,7 +42,7 @@ public class ExampleApp extends Application {
                 .configure();
 
         //初始化Bmob
-        Bmob.initialize(this, "b0f0893d8048dab2bcf2270c62ddc8b2");
+        Bmob.initialize(this, "249915bf8023c9ce199ac682e0d355e9");
 
 
         //开启极光推送

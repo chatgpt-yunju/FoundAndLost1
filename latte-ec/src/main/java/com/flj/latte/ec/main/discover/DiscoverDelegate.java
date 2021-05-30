@@ -30,6 +30,8 @@ public class DiscoverDelegate extends BottomItemDelegate {
     @Override
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
+
+
         final WebDelegateImpl delegate = WebDelegateImpl.create("https://yunjunet.52msr.cn");
         delegate.setTopDelegate(this.getParentDelegate());
         getSupportDelegate().loadRootFragment(R.id.web_discovery_container, delegate);
