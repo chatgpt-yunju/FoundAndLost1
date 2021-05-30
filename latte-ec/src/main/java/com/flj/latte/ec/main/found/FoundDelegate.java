@@ -52,7 +52,7 @@ public class FoundDelegate extends BottomItemDelegate {
         lv_found=$(R.id.lv_found);
         iv_add_found=$(R.id.iv_add_found);
         //初始化数据
-        initData();
+        initFoundData();
         //设置适配器
 //        FoundAdapter foundAdapter=new FoundAdapter();
 //        lv_found.setAdapter(foundAdapter);
@@ -69,7 +69,7 @@ public class FoundDelegate extends BottomItemDelegate {
         return new DefaultHorizontalAnimator();
     }
 
-    private void  initData(){
+    private void  initFoundData(){
 //        list_FoundGood =new ArrayList<>();
         BmobQuery<FoundGood> foodBmobQuery = new BmobQuery<>();
         foodBmobQuery.order("-updatedAt");//排序
@@ -80,6 +80,25 @@ public class FoundDelegate extends BottomItemDelegate {
                 if (e == null) {
                    FoundAdapter foundAdapter=new FoundAdapter(list,getSupportDelegate().getActivity());//创建适配器
                    lv_found.setAdapter(foundAdapter);
+                    Toast.makeText(getContext(), "查询成功" , Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getContext(), "查询数据失败" + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
+    private void  initLostData(){
+//        list_FoundGood =new ArrayList<>();
+        BmobQuery<FoundGood> foodBmobQuery = new BmobQuery<>();
+        foodBmobQuery.order("-updatedAt");//排序
+        foodBmobQuery.findObjects(new FindListener<FoundGood>() {
+
+            @Override
+            public void done(List<FoundGood> list, BmobException e) {
+                if (e == null) {
+                    FoundAdapter foundAdapter=new FoundAdapter(list,getSupportDelegate().getActivity());//创建适配器
+                    lv_found.setAdapter(foundAdapter);
                     Toast.makeText(getContext(), "查询成功" , Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getContext(), "查询数据失败" + e.getMessage(), Toast.LENGTH_LONG).show();
