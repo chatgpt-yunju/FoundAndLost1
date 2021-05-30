@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.diabin.latte.ec.R;
+import com.flj.latte.app.AccountManager;
 import com.flj.latte.delegates.LatteDelegate;
 import com.flj.latte.ec.Bmob.BmobSignIn;
 import com.flj.latte.ec.Bmob.BombSignUp;
@@ -47,6 +48,24 @@ public class SignInDelegate extends LatteDelegate implements View.OnClickListene
 
     private void onClickSignIn() {
         if (checkForm()) {
+            BmobSignIn.onBombSignIn(getSupportDelegate(),getContext(),mName.getText().toString(),mPassword.getText().toString());
+            BmobUser userlogin=new BmobUser();
+            userlogin.setUsername(mName.getText().toString());
+            userlogin.setPassword(mPassword.getText().toString());
+            userlogin.login(new SaveListener<Object>() {
+                @Override
+                public void done(Object o, BmobException e) {
+                    if (e == null) {
+                        Toast.makeText(getContext(), "登录成功，返回objectId为："+o, Toast.LENGTH_LONG).show();
+                        //已经注册并登录成功了
+                        AccountManager.setSignState(true);
+                        getSupportDelegate().startWithPop(new EcBottomDelegate());
+                    } else {
+                        Toast.makeText(getContext(), "login fail:" + e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+
             RestClient.builder()
                     .url("http://mock.fulingjie.com/mock/data/user_profile.json")
                     .params("name", mName.getText().toString())

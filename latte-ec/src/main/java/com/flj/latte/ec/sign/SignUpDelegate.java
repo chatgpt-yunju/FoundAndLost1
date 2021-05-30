@@ -44,6 +44,12 @@ public class SignUpDelegate extends LatteDelegate {
 
     private void onClickSignUp() {
         if (checkForm()) {
+            BombSignUp.onBombSignUp(getContext(),
+                    mName.getText().toString(),
+                    mEmail.getText().toString(),
+                    mPhone.getText().toString(),
+                    mPassword.getText().toString());
+
             RestClient.builder()
                     .url("http://mock.fulingjie.com/mock/data/user_profile.json")
                     .params("name", mName.getText().toString())
@@ -64,6 +70,7 @@ public class SignUpDelegate extends LatteDelegate {
                     })
                     .build()
                     .post();
+
         }
     }
 
