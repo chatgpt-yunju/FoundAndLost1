@@ -78,8 +78,8 @@ public class AddLostDelegate extends BottomItemDelegate {
             isPass=false;
         }
 
-        if (TextUtils.isEmpty(Num)) {
-            et_found_num.setError("手机号码不能为空");
+        if (Num.isEmpty() || Num.length() != 11) {
+            et_found_num.setError("手机号码错误");
             isPass=false;
         }
 

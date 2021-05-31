@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -51,7 +52,8 @@ public class AddFoundDelegate extends BottomItemDelegate {
         iv_found_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportDelegate().startWithPop(new EcBottomDelegate());
+//                getSupportDelegate().onKe(KeyEvent.KEYCODE_BACK, null);
+                //                getSupportDelegate().startWithPop(new EcBottomDelegate());
             }
         });
 
@@ -80,8 +82,8 @@ public class AddFoundDelegate extends BottomItemDelegate {
             isPass=false;
         }
 
-        if (TextUtils.isEmpty(Num)) {
-            et_found_num.setError("手机号码不能为空");
+        if (Num.isEmpty() || Num.length() != 11) {
+            et_found_num.setError("手机号码错误");
             isPass=false;
         }
 

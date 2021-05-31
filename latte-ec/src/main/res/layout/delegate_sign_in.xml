@@ -96,6 +96,7 @@
                 tools:ignore="HardcodedText" />
 
             <com.joanzapata.iconify.widget.IconTextView
+                android:visibility="invisible"
                 android:id="@+id/icon_sign_in_wechat"
                 android:layout_width="100dp"
                 android:layout_height="100dp"

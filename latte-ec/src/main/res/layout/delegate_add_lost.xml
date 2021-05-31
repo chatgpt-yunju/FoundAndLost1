@@ -5,9 +5,14 @@
     android:background="#e5e5e5"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EA4D3C"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="45dp"
         android:background="#EA4D3C">
 
         <com.joanzapata.iconify.widget.IconTextView
@@ -57,14 +62,15 @@
         android:layout_marginTop="12dp"
         android:hint="手机号码"
         android:textColorHint="#000"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:inputType="phone"/>
 
     <EditText
         android:id="@+id/et_found_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:hint="描述"
+        android:hint="丢失物品信息描述"
         android:textColorHint="#000"
         android:textSize="15sp" />
 </LinearLayout>
