@@ -34,7 +34,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by 傅令杰
+ *
  */
 
 public class IndexDelegate extends BottomItemDelegate implements View.OnFocusChangeListener {
