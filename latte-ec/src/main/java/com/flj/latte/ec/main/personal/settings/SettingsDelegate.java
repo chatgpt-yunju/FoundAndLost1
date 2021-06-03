@@ -15,7 +15,6 @@ import com.diabin.latte.ec.R;
 import com.flj.latte.app.AccountManager;
 import com.flj.latte.delegates.LatteDelegate;
 import com.flj.latte.ec.launcher.LauncherDelegate;
-import com.flj.latte.ec.main.personal.address.AddressDelegate;
 import com.flj.latte.ec.main.personal.list.ListAdapter;
 import com.flj.latte.ec.main.personal.list.ListBean;
 import com.flj.latte.ec.main.personal.list.ListItemType;
@@ -49,7 +48,7 @@ public class SettingsDelegate extends LatteDelegate {
         final ListBean push = new ListBean.Builder()
                 .setItemType(ListItemType.ITEM_SWITCH)
                 .setId(1)
-                .setDelegate(new AddressDelegate())
+                .setDelegate(new SettingsDelegate())
                 .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @SuppressWarnings("unchecked")
                     @Override

@@ -6,13 +6,9 @@ import com.flj.latte.delegates.bottom.BaseBottomDelegate;
 import com.flj.latte.delegates.bottom.BottomItemDelegate;
 import com.flj.latte.delegates.bottom.BottomTabBean;
 import com.flj.latte.delegates.bottom.ItemBuilder;
-import com.flj.latte.ec.main.cart.ShopCartDelegate;
-import com.flj.latte.ec.main.discover.DiscoverDelegate;
 import com.flj.latte.ec.main.found.FoundDelegate;
-import com.flj.latte.ec.main.index.IndexDelegate;
 import com.flj.latte.ec.main.lost.LostDelegate;
 import com.flj.latte.ec.main.personal.PersonalDelegate;
-import com.flj.latte.ec.main.sort.SortDelegate;
 
 import java.util.LinkedHashMap;
 

@@ -14,12 +14,9 @@ import com.diabin.latte.ec.R;
 import com.flj.latte.app.AccountManager;
 import com.flj.latte.delegates.bottom.BottomItemDelegate;
 import com.flj.latte.ec.launcher.LauncherDelegate;
-import com.flj.latte.ec.main.index.IndexDelegate;
-import com.flj.latte.ec.main.personal.address.AddressDelegate;
 import com.flj.latte.ec.main.personal.list.ListAdapter;
 import com.flj.latte.ec.main.personal.list.ListBean;
 import com.flj.latte.ec.main.personal.list.ListItemType;
-import com.flj.latte.ec.main.personal.order.OrderListDelegate;
 import com.flj.latte.ec.main.personal.password.PasswordDelegate;
 import com.flj.latte.ec.main.personal.profile.UserProfileDelegate;
 import com.flj.latte.ec.main.personal.settings.SettingsDelegate;
@@ -55,9 +52,9 @@ public class PersonalDelegate extends BottomItemDelegate {
     }
 
     private void startOrderListByType() {
-        final OrderListDelegate delegate = new OrderListDelegate();
-        delegate.setArguments(mArgs);
-        getParentDelegate().getSupportDelegate().start(delegate);
+//        final OrderListDelegate delegate = new OrderListDelegate();
+//        delegate.setArguments(mArgs);
+//        getParentDelegate().getSupportDelegate().start(delegate);
     }
 
     @Override
