@@ -15,7 +15,7 @@ import java.io.InputStream;
 import okhttp3.ResponseBody;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ *  2017/4/2
  */
 
 final class SaveFileTask extends AsyncTask<Object, Void, File> {

@@ -12,7 +12,7 @@ import com.flj.latte.net.callback.IFailure;
 import com.flj.latte.net.callback.ISuccess;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ *  2017/4/2
  */
 
 public class ExampleDelegate extends LatteDelegate {

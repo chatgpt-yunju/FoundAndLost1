@@ -14,7 +14,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ *  2017/4/2
  */
 
 public final class RestCreator {

@@ -8,7 +8,7 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 
 /**
- * Created by 傅令杰 on 2017/4/11
+ *  2017/4/11
  */
 
 public abstract class BaseInterceptor implements Interceptor {

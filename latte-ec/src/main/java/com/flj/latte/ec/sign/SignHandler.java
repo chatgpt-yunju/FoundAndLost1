@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.flj.latte.app.AccountManager;
 
 /**
- * Created by 傅令杰 on 2017/4/22
+ *  2017/4/22
  */
 
 public class SignHandler {
