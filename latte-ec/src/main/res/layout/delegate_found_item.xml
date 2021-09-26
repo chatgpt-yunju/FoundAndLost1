@@ -6,46 +6,71 @@
     android:background="#fff"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
     <TextView
         android:id="@+id/tv_found_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
-        android:text="校园卡谁的"
+        android:text="无边落木萧萧下，不尽长江滚滚来。"
         android:textColor="#000"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/tv_found_desc"
+        android:id="@+id/tv_found_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:text="捡到一张校园卡，速度过来领"
-        android:textColor="#9000"
-        android:textSize="15sp" />
+        android:layout_marginTop="10dp"
+        android:text="2014-05-21 17:04:11"
+        android:textColor="#9000"/>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/tv_found_time"
+            android:id="@+id/tv_found_at"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="&#060;"
+            android:textColor="#9000"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tv_found_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="&#060;一兔一星一月明"
+            android:textColor="#9000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_found_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#5CBE6C"
             android:layout_centerVertical="true"
-            android:text="2014-05-21 17:04:11"
-            android:textColor="#9000"/>
+            android:layout_toLeftOf="@+id/tv_found_num"
+            android:text="QQ: "
+            android:gravity="right"
+            android:textColor="#fff"/>
+
 
         <TextView
             android:id="@+id/tv_found_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#5CBE6C"
-            android:padding="5dp"
+            android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:text="18312365987"
